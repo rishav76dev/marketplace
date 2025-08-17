@@ -31,4 +31,9 @@ pub mod marketplace {
         ctx.accounts.close_mint_vault()
     }
 
+    pub fn delist(ctx: Context<Delist>) -> Result<()> {
+        ctx.accounts.withdraw_nft()?;
+        ctx.accounts.close_mint_vault()
+    }
+
 }
